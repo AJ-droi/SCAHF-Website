@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-1: #fe0403;
+    --clr-primary-2: #0a0442;
+    --clr-primary-3: #181818;
+    --clr-primary-4: #3ca455;
+    --clr-primary-5: #e67337;
+    --clr-primary-6: #ececee;
+    --clr-primary-7: #ffffff;
+    --clr-primary-8: #06041d;
+    --clr-primary-9: #f6f6f9;
+    --clr-primary-10: #ccced0;
+    --clr-primary-11: #040211;
+    --clr-primary-12: #110f24;
+    --clr-primary-13: #181818;
+    --clr-gradient: linear-gradient(to right, #176bfb, #3ca455);
+  
+    --ff-primary: "Lato", sans-serif;
+  }
+
+.donate-header,
+.contact-header,
+.request-header,
+.community-header,
+.volunteer-header,
+.event-header{
+    width: 100%;
+    height:30vh;
+    background-size: 100% 100%;
+}
+
+.donate-header{
+    background-image:url(./Images/Donate\ page.png);
+}
+
+
+.donate-header::before,
+.contact-header::before,
+.request-header::before,
+.community-header::before,
+.volunteer-header::before,
+.event-header::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-primary-8);
+    opacity: 0.75;
+  }
+
+  .donate-header section,
+  .contact-header section,
+  .request-header section,
+  .community-header section,
+  .volunteer-header section,
+  .event-header section{
+      display: grid;
+      position: relative;
+      justify-content: start;
+      align-content: center;
+      text-align: left;
+      z-index: 2;
+      color:white;
+  }
+
+  .donate-header h3{
+      font-size: 2.5rem;
+  }
+
+  .donate-header p{
+      font-weight: 300;
+  }
+
+  .donate-container,
+  .contact-container{
+      width: 70%;
+      height: 93vh;
+      background-color: #E5E5E5;
+      margin: -4% 15% 0% 14%;
+      padding: 5% 5%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      position: relative;
+      z-index:15;
+  }
+
+  .donate-container h4,
+  .contact-container h4{
+      font-size: 0.9rem;
+      margin-bottom: 5%;
+  }
+
+  .donate-container-first,
+  .contact-container-first{
+    width: 40%;
+    text-align: left;
+  }
+
+  input{
+      width:80%;
+      border: none;
+  }
+
+  input,
+  textarea{
+    background-color:#F6F6F9;
+    border: none;
+    padding: 2% 0% 2% 4%;
+    margin: 3% 0%;
+  }
+
+  button{
+      background-color: #3ca455;
+      justify-self: flex-start;
+      padding: 2% 4%;
+      border: none;
+      border-radius: 3px;
+      color: var(--clr-primary-7);
+      margin-top: 4%;
+  }
+
+  .donate-line{
+      background-color: var(--clr-primary-11);
+      width:0.1rem;
+      height: 45vh;
+      border-radius: 2px;
+      margin-top: 5%;
+  }
+
+  .donate-container-second,
+  .contact-container-second{
+      width: 40%;
+      text-align: left;
+  }
+
+  .donate-container-second h5,
+  .contact-container-second p{
+      font-size: 0.7rem ;
+      font-weight: 300;
+  }
+
+  .donate-container-second p,
+  .contact-container-second h5{
+      font-size: 0.8rem;
+      font-weight: 700;
+
+  }
+
+  #div1{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 60%;
+  }
+
+  #div1 img{
+      margin-top: 0%;
+      width: 6rem;
+      height: 3rem
+  }
+  
+  #div1,
+  #div2,
+  #div3{
+      margin: 10% 0%;
+  }
+
+  /* CONTACT PAGE */
+  .contact-header{
+    background-image: url(../Contact/Images/Contact\ page.png);
+}
+
+.contact-container{
+    height: 70vh;
+    width: 60%;
+    margin: -4% 20% 0% 20%;
+}
+
+.contact-container input{
+    width: 98%;
+}
+
+.contact-container h4{
+    margin-top: 11%;
+}
+.contact-container-first button{
+    background-color: var(--clr-primary-1);
+    padding: 3% 6%;
+
+}
+
+/* .contact-container-second h5{
+
+} */
+
+.contact-container-second h5,
+.contact-container-second p{
+    line-height: 1.6;
+}
+
+/* REQUEST PAGE */
+.request-header{
+    background-image: url(../Community/Images/Request\ Donor.png);
+}
+
+.request-header button{
+    padding: 3% 8%;
+    background-color: #ccced0;
+}
+
+
+/* COMMUNITY PAGE */
+.community-header{
+    background-image: url(../Community/Images/Blood\ donor.png);
+}
+
+main{
+    display: grid;
+    place-items: center;
+}
+
+main p{
+    text-align: left;
+    line-height: 2.5;
+    padding: 3% 0%;
+    font-size: 0.9rem;
+}
+
+.community-form{
+    width: 100%;
+    padding: 0% 12%;
+}
+
+.form-input{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.volunteer-section h6,
+.community-section h6{
+    padding: 2% 0%;
+}
+
+.volunteer-section button,
+.community-section button{
+    padding: 1% 4%;
+    background-color: var(--clr-primary-2);
+}
+
+#btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+#btn-container button:first-child{
+    background-color: var(--clr-primary-6);
+    color: var(--clr-primary-11)
+}
+
+#btn-container button{
+    margin-left: 3%;
+}
+
+/* VOLUNTEER PAGE */
+.volunteer-header{
+    background-image: url(../Community/Images/Blood\ donor.png);
+}
+
+.volunteer-form{
+    width: 100%;
+    padding: 0% 12%;
+}
+
+progress{
+    width:100%;
+    height: 1vh;
+}
+
+progress::-webkit-progress-value{
+    background: #e67337;
+}
+
+#file2{
+    background: #3ca455;
+}
+
+
+
+/* EVENTS PAGE */
+
+.event-header{
+    background-image: url(../About-Us/Images/Events.png);
+}
+
+
+
+.event-main{
+    height: 280vh;
+}
+
+.event-main hr{
+    width: 80%;
+    margin-left: 14%;
+}
+
+.event-main h4{
+    padding-bottom: 3%;
+}
+
+.event-main h4,
+.event-main section h4{
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 3%;
+    padding-left: 14%;
+}
+
+.past-events{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    column-gap: 10%;
+    row-gap: 15%;
+    height: 100vh;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.past-events div{
+    display: grid;
+    align-content: start;
+    text-align: left;
+    background-color: var(--clr-primary-6);
+    width: 120%;
+    height: 70vh;
+    line-height: 1.7;
+    padding: 2% 7%;
+}
+
+.past-events h6{
+    font-size: 1rem;
+    padding: 2% 0%;
+    
+}
+
+.past-events p{
+    padding-top: 3%;
+    font-size: 0.85rem;
+}
