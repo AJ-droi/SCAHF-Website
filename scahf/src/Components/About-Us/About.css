@@ -22,7 +22,7 @@
 .about-header {
   background-image: url("./Images/About\ us.png");
   width: 100%;
-  height: 50vh;
+  height: auto;
   background-size: 100% 100%;
 }
 
@@ -47,7 +47,7 @@
 
 .about-section {
   width: 100%;
-  height: 50vh;
+  height: auto;
   text-align: left;
 }
 
@@ -67,44 +67,44 @@
 }
 
 .what-section {
-  width: 65%;
-  height: 55vh;
-  padding: 4% 0%;
+  height: auto;
+  padding: 2% 0%;
   background-color: var(--clr-primary-12);
   color: var(--clr-primary-7);
   text-align: left;
 }
 
-.what-section h3,
-.what-section p {
-  margin-left: 15%;
+.what-section h3 {
+  padding-left: 15%;
 }
 
 .what-section h3 {
   font-size: 1.7rem;
 }
 
-.what-section p {
-  line-height: 1.7;
-  font-size: 0.95rem;
+.what-section ol{
+  padding-left: 17%;
+}
+
+.what-section li {
+  line-height: 1.5;
+  font-size: 0.8rem;
   margin-top: 3%;
 }
 
 .what-img-container {
-  width: 45%;
   height: 60vh;
   background-image: url(./Images/Rectangle\ 51.png);
   background-size: 100% 100%;
   object-fit: contain;
-  position: absolute;
+  /* position: absolute; */
   margin-top: 8%;
-  right: 15%;
+  margin-left: -15%;
 }
 
 /* THIS IS FOR THE Objective Page*/
 .objective-container {
   text-align: left;
-  margin-top: 7%;
 }
 
 .objective-container h3 {
@@ -115,43 +115,44 @@
 }
 
 .paragraph-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   justify-content: space-evenly;
-  line-height: 1.8;
+  line-height: 1.8; */
+  width: 100%;
+  padding: 0% 9%;
 }
 
-.paragraph-container p {
-  margin-top: 3%;
-  font-size: 0.9rem;
-}
-.paragraph-container p:nth-child(odd):before {
+
+
+
+.paragraph-container p:nth-child(odd)::before {
   content: "";
   background-color: var(--clr-primary-11);
   width: 0.5rem;
   height: 0.5rem;
   position: absolute;
   margin-top: 0px;
-  left: 7.9rem;
+  left: 6.8rem;
   z-index: 1;
 }
 
-.paragraph-container p:nth-child(even):before {
+.paragraph-container p:nth-child(even)::before {
   content: "";
   background-color: var(--clr-primary-11);
   width: 0.5rem;
   height: 0.5rem;
   position: absolute;
   margin-top: 0px;
-  right: 41.35rem;
+  right: 42.5rem;
   z-index: 1;
 }
 
 /* THIS IS FOR THE Founder Page*/
 .founder-container {
   height: 40vh;
-  display: flex;
+  /* display: flex; */
   background-color: var(--clr-primary-2);
   justify-content: space-evenly;
   place-items: center;
@@ -167,6 +168,7 @@
   background-image: url(./Images/IMG_4999.png);
   width: 10rem;
   height: 10rem;
+  margin-left: 17%;
   background-size: 100% 100%;
 }
 
@@ -185,7 +187,7 @@
 .founder-img::after {
   content: "";
   position: absolute;
-  width: 10rem;
+  width: 10.2rem;
   height: 10rem;
   left: 11.7%;
   background-color: var(--clr-primary-1);
@@ -311,4 +313,80 @@
 
 #sixth-image{
     background-image: url(./Images/Ebenezer\ Wikina.png);
+}
+
+@media screen and (max-width: 960px) {
+  /* BOARD SECTION */
+  .what-section{
+    padding: 5% 0%;
+  }
+
+  .what-img-container{
+    margin: 0%;
+  }
+
+  /* OBJECTIVE SECTION */
+
+  .objective-container{
+    width:100%;
+  }
+
+  .paragraph-container{
+    margin: 0px;
+    padding:0px;
+  }
+
+  .paragraph-container p{
+    width:100%;
+    text-align: justify;
+    padding: 2% 10%;
+  }
+
+  .paragraph-container p:nth-child(odd)::before,
+  .paragraph-container p:nth-child(even)::before{
+    right: 0rem;
+    left:1.8rem;
+  }
+
+  /* FOUNDER SECTION */
+
+  .founder-container{
+    height: auto;
+    padding: 10% 5%;
+  }
+
+  .founder-section{
+    padding: 10% 5%;
+  }
+
+  .founder-img::before,
+  .founder-img::after{
+    display: none;
+  }
+
+  #founder-line{
+    display: none
+  }
+
+  .founder-paragraph{
+    text-align: justify;
+  }
+
+  /* BOARD SECTION */
+  .board-container h3{
+    font-size: 1.3rem;
+  }
+
+  .board-section h5{
+    font-size: 1rem;
+  }
+
+  .board-section p{
+    font-size: 0.8rem;
+  }
+
+
+
+  
+
 }

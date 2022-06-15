@@ -4,8 +4,8 @@ import { ImQuotesLeft } from "react-icons/im";
 
 function Founder() {
   return (
-    <div className="founder-container">
-        <section className='founder-section'>
+    <div className="founder-container row">
+        <section className='founder-section col-lg-7'>
             <div className='founder-img'></div>
             <div className='quote-container'>
                 <ImQuotesLeft />
@@ -16,9 +16,9 @@ function Founder() {
             </div>
         </section>
 
-        <div id='founder-line'> </div>
+        <div id='founder-line' className='col-lg-1'> </div>
 
-        <div className='founder-paragraph'>
+        <div className='founder-paragraph col-lg-4'>
             <p>
             A 3rd year Law student at Rivers State University, Nigeria.<br /> 
             Having firsthand experience of the effect of ignorance and <br /> 

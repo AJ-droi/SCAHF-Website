@@ -10,10 +10,10 @@ const Contact = () => {
             </section>
         </header> 
 
-        <section className='contact-container'>
-          <div className='contact-container-first'>
+        <section className='contact-container row'>
+          <div className='contact-container-first col-lg-5'>
             <h4>Get In Touch</h4>
-            <form>
+            <form className='row'>
               <input type="text" placeholder='Name' /><br />
 
               <input type="email" placeholder='Email' /><br />
@@ -24,11 +24,10 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className='donate-line'></div>
 
-          <div className='contact-container-second'>
+          <div className='contact-container-second col-lg-5'>
 
-            <div id="div2">
+            <div id="div1">
                 <h5>Address</h5>
                 <p>Km 2 eleme akpajo expressway, Port Harcourt,<br /> 
                 Rivers State, Nigeria.</p>

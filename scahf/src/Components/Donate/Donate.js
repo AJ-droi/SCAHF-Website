@@ -13,10 +13,10 @@ const Donate = () => {
             </section>
         </header> 
 
-        <section className='donate-container'>
-          <div className='donate-container-first'>
+        <section className='donate-container row'>
+          <div className='donate-container-first col-lg-5'>
             <h4>Thank you for your donation</h4>
-            <form>
+            <form className='row'>
               <input type="text" placeholder='Enter Full Name' /><br />
 
               <input type="email" placeholder='Enter your email address' /><br />
@@ -31,11 +31,9 @@ const Donate = () => {
             </form>
           </div>
 
-          <div className='donate-line'></div>
-
-          <div className='donate-container-second'>
+          <div className='donate-container-second col-lg-5'>
             <h4>Bank Details</h4>
-            <div id="div1">
+            <div id="div1" >
               <div>
                 <h5>Account Number</h5>
                 <p>0129401758</p>

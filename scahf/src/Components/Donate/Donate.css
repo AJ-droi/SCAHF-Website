@@ -19,7 +19,6 @@
     --clr-primary-12: #110f24;
     --clr-primary-13: #181818;
     --clr-gradient: linear-gradient(to right, #176bfb, #3ca455);
-  
     --ff-primary: "Lato", sans-serif;
   }
 
@@ -30,7 +29,7 @@
 .volunteer-header,
 .event-header{
     width: 100%;
-    height:30vh;
+    height:auto;
     background-size: 100% 100%;
 }
 
@@ -81,7 +80,7 @@
   .donate-container,
   .contact-container{
       width: 70%;
-      height: 93vh;
+      height: auto;
       background-color: #E5E5E5;
       margin: -4% 15% 0% 14%;
       padding: 5% 5%;
@@ -94,77 +93,88 @@
 
   .donate-container h4,
   .contact-container h4{
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin-bottom: 5%;
+      text-align: left;
   }
 
-  .donate-container-first,
+  /* .donate-container-first,
   .contact-container-first{
     width: 40%;
     text-align: left;
+  } */
+
+  .form-input{
+    padding-left:10%;
   }
 
   input{
-      width:80%;
-      border: none;
+      width:100%;
   }
 
   input,
   textarea{
     background-color:#F6F6F9;
     border: none;
-    padding: 2% 0% 2% 4%;
-    margin: 3% 0%;
+    padding: 1% 0% 1% 2%;
+    margin: 3% 2%;
   }
 
-  button{
+  .donate-container-first button{
       background-color: #3ca455;
       justify-self: flex-start;
-      padding: 2% 4%;
+      padding: 3% 6%;
       border: none;
       border-radius: 3px;
       color: var(--clr-primary-7);
       margin-top: 4%;
+      margin-left: 2%;
   }
-
+/* 
   .donate-line{
       background-color: var(--clr-primary-11);
-      width:0.1rem;
+      width:0.01rem;
       height: 45vh;
       border-radius: 2px;
       margin-top: 5%;
-  }
+  } */
 
   .donate-container-second,
   .contact-container-second{
-      width: 40%;
-      text-align: left;
+    border-left: 2px solid #040211;
+    text-align: left;
   }
 
   .donate-container-second h5,
   .contact-container-second p{
-      font-size: 0.7rem ;
+      font-size: 0.9rem ;
       font-weight: 300;
   }
 
   .donate-container-second p,
   .contact-container-second h5{
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 700;
 
   }
 
   #div1{
       display: flex;
-      align-items: flex-start;
+      /* align-items: flex-start;
       justify-content: space-between;
-      width: 60%;
+      width: 100%; */
   }
+
 
   #div1 img{
       margin-top: 0%;
+      margin-left: 5%;
       width: 6rem;
       height: 3rem
+  }
+
+  #div1 p{
+    margin-left: 5%;
   }
   
   #div1,
@@ -173,13 +183,18 @@
       margin: 10% 0%;
   }
 
+
+  #div2{
+    padding-top: 5%;
+  }
+
   /* CONTACT PAGE */
   .contact-header{
     background-image: url(../Contact/Images/Contact\ page.png);
 }
 
 .contact-container{
-    height: 70vh;
+    height: auto;
     width: 60%;
     margin: -4% 20% 0% 20%;
 }
@@ -194,7 +209,9 @@
 .contact-container-first button{
     background-color: var(--clr-primary-1);
     padding: 3% 6%;
-
+    color: white;
+    border: none;
+    border-radius: 2px;
 }
 
 /* .contact-container-second h5{
@@ -214,6 +231,9 @@
 .request-header button{
     padding: 3% 8%;
     background-color: #ccced0;
+    color: white;
+    border: none;
+    border-radius: 2px;
 }
 
 
@@ -236,14 +256,15 @@ main p{
 
 .community-form{
     width: 100%;
-    padding: 0% 12%;
+    padding: 5% 12%;
+    height: auto;
 }
 
-.form-input{
+/* .form-input{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-}
+} */
 
 .volunteer-section h6,
 .community-section h6{
@@ -254,6 +275,9 @@ main p{
 .community-section button{
     padding: 1% 4%;
     background-color: var(--clr-primary-2);
+    color: white;
+    border: none;
+    border-radius: 2px;
 }
 
 #btn-container{
@@ -300,8 +324,6 @@ progress::-webkit-progress-value{
 .event-header{
     background-image: url(../About-Us/Images/Events.png);
 }
-
-
 
 .event-main{
     height: 280vh;
@@ -356,4 +378,69 @@ progress::-webkit-progress-value{
 .past-events p{
     padding-top: 3%;
     font-size: 0.85rem;
+}
+
+@media screen and (max-width: 960px) {
+    .community-header{
+        height: auto;
+    }
+
+    main{
+        margin: 0%;
+        padding: 0% 5%;
+        width:100%;
+    }
+   
+    .form-input{
+        height: auto;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    input{
+        padding: 5% 0%;
+        font-size: 0.8rem;
+    }
+
+    .volunteer-section button{
+    padding: 1% 10%;
+    font-size: 0.8rem;
+    }
+
+    /* DONATE SECTION */
+    .donate-container-second,
+    .contact-container-second{
+        border-left: none;
+        width:80%;
+        padding: 5% 0%;
+        margin: 0%;
+    }
+
+    .donate-container,
+    .contact-container{
+        width:100%;
+        margin: 0%;
+    }
+
+    .donate-container h4,
+  .contact-container h4{
+    text-align: center;
+  }
+
+    #div1{
+        width:100%;
+    }
+
+    #div1,
+    #div2,
+    #div3{
+        margin: 0%;
+        text-align: center;
+        display: grid;
+        place-items: center;
+    }
+
+   
+
+    
 }

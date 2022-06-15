@@ -1,23 +1,25 @@
 import React from 'react';
 import "../About.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function What() {
   return (
-    <div className='what-container'>
-      <section className='what-section'>
+    <div className='what-container row'>
+      <section className='what-section col-lg-6'>
         <h3>What We Do</h3>
-        <p>
-            1. Sickle Cell Awareness<br/>
-            2. Free Genotype screening <br/>
-            3. Advocacy <br/>
-            4. Genetic counselling <br/>
-            5. Volunteer Blood Donation Awareness <br/>
-            6. Support groups for people living with sickle cell disorder <br/>
-            7. Blood Donation Drives <br/>
-        </p>
+        <ol>
+          <li>Sickle Cell Awareness</li>
+          <li>Free Genotype screening </li>
+          <li>Advocacy</li>
+          <li>Genetic counselling</li>
+          <li>Volunteer Blood Donation Awareness</li>
+          <li>Support groups for people living with sickle cell disorder</li>
+          <li>Blood Donation Drives</li>
+        </ol>
       </section>
 
-      <div className='what-img-container'>
+      <div className='what-img-container col-lg-6'>
 
       </div>      
         

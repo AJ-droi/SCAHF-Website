@@ -36,13 +36,13 @@ const Community = () => {
                 
                 <progress id="file1" value="50" max="100"> 32% </progress>
                     <h6>Step 1: Bio Data</h6>
-                    <div className='form-input'>
-                        <input type="text" placeholder='Full Name' />
-                        <input type="email" placeholder='Email Address' />
-                        <input type="date" placeholder='Date of Birth' />
-                        <input type="text" placeholder='Gender' />
-                        <input type="text" placeholder='Contact Address' />
-                        <input type="text" placeholder='State of Origin' />
+                    <div className='form-input row'>
+                        <input className='col-lg-3' type="text" placeholder='Full Name' />
+                        <input className='col-lg-3' type="email" placeholder='Email Address' />
+                        <input className='col-lg-3' type="date" placeholder='Date of Birth' />
+                        <input className='col-lg-3' type="text" placeholder='Gender' />
+                        <input className='col-lg-3' type="text" placeholder='Contact Address' />
+                        <input className='col-lg-3' type="text" placeholder='State of Origin' />
                     </div>
                     <button onClick={() => pageCheck()} >Next</button>
                 </section>}
@@ -50,14 +50,14 @@ const Community = () => {
                 {check && <section className='volunteer-section'>
                     <progress id="file2" value="100" max="100"> 32% </progress>
                     <h6>Step 2: Blood Donation Details</h6>
-                    <div className='form-input'>
-                        <input type="text" placeholder='Do you know your genotype?' />
-                        <input type="text" placeholder='If yes, whats your genotype?' />
-                        <input type="text" placeholder='Do you know your blood group?' />
-                        <input type="text" placeholder='What is your blood group?' />
-                        <input type="text" placeholder='When was your last donation?' />
-                        <input type="text" placeholder='Have you donated to scahf before?' />
-                        <input type="text" placeholder='if yes, when?' />
+                    <div className='form-input row'>
+                        <input className='col-lg-4' type="text" placeholder='Do you know your genotype?' />
+                        <input className='col-lg-4' type="text" placeholder='If yes, whats your genotype?' />
+                        <input className='col-lg-4' type="text" placeholder='Do you know your blood group?' />
+                        <input className='col-lg-4' type="text" placeholder='What is your blood group?' />
+                        <input className='col-lg-4' type="text" placeholder='When was your last donation?' />
+                        <input className='col-lg-4' type="text" placeholder='Have you donated to scahf before?' />
+                        <input className='col-lg-4' type="text" placeholder='if yes, when?' />
                     </div>
                     
                     <div id="btn-container">

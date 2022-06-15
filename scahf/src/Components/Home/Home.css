@@ -1,99 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 :root {
-    --clr-primary-1:#FE0403;
-    --clr-primary-2:#0A0442;
-    --clr-primary-3:#181818;
-    --clr-primary-4:#3CA455;
-    --clr-primary-5:#E67337;
-    --clr-primary-6:#ECECEE;
-    --clr-primary-7:#FFFFFF;
-    --clr-primary-8:#06041D;
-    --clr-primary-9:#F6F6F9;
-    --clr-primary-10:#CCCED0;
-    --clr-primary-11: #040211;
-    --clr-primary-12: #110F24;
-    --clr-gradient: linear-gradient(to right, #176BFB, #3CA455);
+  --clr-primary-1: #fe0403;
+  --clr-primary-2: #0a0442;
+  --clr-primary-3: #181818;
+  --clr-primary-4: #3ca455;
+  --clr-primary-5: #e67337;
+  --clr-primary-6: #ececee;
+  --clr-primary-7: #ffffff;
+  --clr-primary-8: #06041d;
+  --clr-primary-9: #f6f6f9;
+  --clr-primary-10: #ccced0;
+  --clr-primary-11: #040211;
+  --clr-primary-12: #110f24;
+  --clr-gradient: linear-gradient(to right, #176bfb, #3ca455);
 
-    --ff-primary: 'Lato', sans-serif;
+  --ff-primary: "Lato", sans-serif;
 }
 
-*{
-    font-family:var(--ff-primary) ;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+* {
+  font-family: var(--ff-primary);
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
+button a{
+    text-decoration: none;
+}
 /* THIS IS FOR THE NAVBAR */
 
-.nav{
+/* nav{
     display: flex;
     justify-content: space-around;
     margin: 1% auto;
     font-family: var(--ff-primary);
-    /* background-color: #E67337; */
+} */
+
+img {
+  width: 3.8rem;
+  height: 2.8rem;
+  margin-top: 0.675rem;
 }
 
-img{
-    width: 3.8rem;
-    height:2.8rem;
-    margin-top: 0.675rem;
+nav ul {
+  margin: 2% 0%;
 }
 
-ul {
-    display: flex ;
-    margin: 2% 0%;
+nav li {
+  list-style-type: none;
+  margin-left: 2.2rem;
+  font-size: 1rem;
 }
 
-li{
-    list-style-type: none;
-    margin-left: 2.2rem;
-    font-size: 1rem;
+nav li:nth-child(1):hover,
+nav li:nth-child(2):hover,
+nav li:nth-child(3):hover,
+nav li:nth-child(4):hover,
+nav li:nth-child(5):hover {
+  animation-name: hover;
+  animation-duration: 5s;
+  animation-delay: -2s;
 }
 
-li:hover{
+@keyframes hover {
+  100%{
     border-bottom: 3px solid var(--clr-primary-1);
-    transition: 0.1s;
+  }
+  
+}
+nav a {
+  text-decoration: none;
+  color: var(--clr-primary-3);
 }
 
-a{
-    text-decoration: none;
-    color: var(--clr-primary-3)
+#chevron {
+  vertical-align: middle;
 }
 
-#chevron{
-    vertical-align: middle;
-}
-
-.nav li:nth-child(6) a{
-    background-color: var(--clr-primary-2);
-    color: var(--clr-primary-7);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.2rem;
-
+nav li:nth-child(6) a {
+  background-color: var(--clr-primary-2);
+  color: var(--clr-primary-7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
 }
 
 
 .dropdown-content1,
-.dropdown-content2{
-    display: grid;
-    background-color: var(--clr-primary-6);
-    position: absolute;
-    align-content: space-evenly;
-    z-index: 18;
-    height: 15vh;
-    width: 8%;
-    margin-top: 2%;
-    font-size: 0.9rem;
-    transition: 1s;
+.dropdown-content2 {
+  display: grid;
+  background-color: var(--clr-primary-6);
+  position: absolute;
+  align-content: space-evenly;
+  z-index: 18;
+  height: 15vh;
+  width: 8%;
+  margin-top: 2%;
+  font-size: 0.9rem;
+  transition: 1s;
 }
 
-.dropdown-content2{
-    margin-left: 2%;
-    width: 12%;
+.dropdown-content2 {
+  margin-left: 2%;
+  width: 12%;
 }
-
 
 /* .dropdown-content{
     display: grid;
@@ -110,274 +120,279 @@ a{
 
 /* THIS IS FOR THE HERO */
 
-.hero{
-    width: 100%;
-    height: 100vh;
-    background: url(./Images/Rectangle\ 16.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(./Images/Rectangle\ 16.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hero::before{
-    content: "";
-    position: absolute;
-    top: 10;
-    left:0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--clr-primary-8);
-    opacity: 0.8;
-    z-index: 0;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-primary-8);
+  opacity: 0.8;
+  z-index: 0;
 }
 
-header{
-    height: 100vh;
-    padding: 15%;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 15;
+header {
+  height: 100vh;
+  padding: 15%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 15;
 }
 
-header h3,header p{
-    color: var(--clr-primary-9);
+header h3,
+header p {
+  color: var(--clr-primary-9);
 }
 
-header h3{
-    font-size: 2.5rem;
-    font-weight: 900;
+header h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
 }
 
-span{
-    color: var(--clr-primary-1);
+span {
+  color: var(--clr-primary-1);
 }
 
-header p{
-    font-size: 0.9rem;
-    margin-top: 1%;
-    line-height: 1.5;
+header p {
+  font-size: 0.9rem;
+  margin-top: 1%;
+  line-height: 1.5;
 }
 
-.button-container{
+/* .button-container{
     display: flex;
     justify-content: center;
     margin-top: 2%;
+} */
+
+.btn1 {
+  color: var(--clr-primary-7);
+  border-radius: 0.2rem;
 }
 
-.button-container a:nth-child(1){
-    color: var(--clr-primary-7);
-    padding: 1rem 2rem;
-    border-radius: 0.2rem;
+.btn2 {
+  color: var(--clr-primary-7);
+  border-radius: 0.2rem;
+  margin-left: 1rem;
 }
 
-.button-container a:nth-child(2){
-    color: var(--clr-primary-7);
-    padding: 1rem 1.5rem;
-    margin-left: 1rem;
-    
-    border-radius: 0.2rem;
+.btn1,
+.btn2 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  border: 1px solid var(--clr-primary-7);
+  padding: 1rem 2rem;
+  background-color:  transparent;
 }
 
-.button-container a:nth-child(1),
-.button-container a:nth-child(2) {
-   font-weight: 400;
-   font-size: 0.9rem;
-   border: 1px solid var(--clr-primary-7) ;
+.btn1:hover,
+.btn2:hover {
+  background-color: var(--clr-primary-1);
+  border: none;
+  transition: 0.5s;
 }
 
-.button-container a:nth-child(1):hover,
-.button-container a:nth-child(2):hover{
-    background-color: var(--clr-primary-1);
-    border:none;
-    transition: 0.5s;
+.btn-links{
+  text-decoration: none;
 }
 
 /* THIS IS FOR THE WHO_WE_ARE SECTION */
 
 .Who {
-    height: 100vh;
-  }
-  
-  .Who-Container {
-    display: flex;
-    background-color: var(--clr-primary-9);
-    margin: 5% 0%;
-    padding: 3% 7%;
-    height: 70%;
-    width:100%;
-    box-sizing: border-box;
-  }
-  
-  #Img-Container::before{
-      content: "";
-      position: absolute;
-      left: 14%;
-      background-color: var(--clr-primary-2);
-      width: 20vw;
-      height: 80vh;
-      margin-top: -4rem;
-  }
-  
-  #Img-Container{
-      margin-left: 10%;
-  }
-  
-  .Who-Container img {
-    width: 22rem;
-    height: 22rem;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .Who-We-Are {
-    width: 50%;
-    margin-left: 10%;
-    text-align: left;
-    padding: 1.5rem;
-    margin-top: 1%;
-  }
-  
-  .Who-We-Are h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--clr-primary-1);
-  }
-  
-  .Who-We-Are p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--clr-primary-3);
-    margin-top: 3%;
-  }
-  
-  .btn{
-      margin-top: 1.5rem;
-  }
-  
-  .Who-We-Are a {
-    background-color: var(--clr-primary-1);
-    color: var(--clr-primary-7);
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    border-radius: 0.3rem;
-  }
-
-  /* THIS IS FOR THE VISION SECTION */
-
-  .Vision-Container{
-    display: flex;
-    color: var(--clr-primary-9);
-    background-image: url("./Images/About\ us.png");
-    background-position: center;
-    background-size: 100% 100%;
-    height: 50vh;
-    width:100%;
-    align-items: center;
-    padding: 0% 5%;
-    margin-top: -7%;
+  height: auto;
 }
 
-.Vision-Container::before{
-    content:"";
-    height:50vh;
-    width:100%;
-    position: absolute;
-    left: 0;
-    background-color: var(--clr-primary-11);
-    opacity: 0.875;
-    z-index: 1;
+.Who-Container {
+  display: flex;
+  background-color: var(--clr-primary-9);
+  margin: 0% 0%;
+  padding: 7% 7%;
+  /* height: 70%;
+    width:100%; */
+  box-sizing: border-box;
+}
+
+#Img-Container::before {
+  content: "";
+  position: absolute;
+  left: 14%;
+  background-color: var(--clr-primary-2);
+  width: 20vw;
+  height: 70vh;
+  margin-top: -1rem;
+}
+
+#Img-Container {
+  margin-left: 10%;
+}
+
+.Who-Container img {
+  width: 22rem;
+  height: 22rem;
+  position: relative;
+  z-index: 2;
+}
+
+.Who-We-Are {
+  width: 100%;
+  margin-left: 10%;
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: 1%;
+}
+
+.Who-We-Are h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--clr-primary-1);
+}
+
+.Who-We-Are p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--clr-primary-3);
+  margin-top: 3%;
+}
+
+.btn {
+  margin-top: 1.5rem;
+}
+
+.Who-We-Are a {
+  background-color: var(--clr-primary-1);
+  color: var(--clr-primary-7);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+/* THIS IS FOR THE VISION SECTION */
+
+.Vision-Container {
+  display: flex;
+  color: var(--clr-primary-9);
+  background-image: url("./Images/About\ us.png");
+  background-position: center;
+  background-size: 100% 100%;
+  height: 50vh;
+  width: 100%;
+  align-items: center;
+  padding: 0% 5%;
+  margin-top: 0%;
+}
+
+.Vision-Container::before {
+  content: "";
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--clr-primary-11);
+  opacity: 0.875;
+  z-index: 1;
 }
 
 #Mission,
 #Vision,
-#Values{
+#Values {
   z-index: 3;
   width: 33%;
- 
 }
 
 #Mission h3,
 #Vision h3,
-#Values h3{
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin: 1rem 0rem;
+#Values h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 1rem 0rem;
 }
 
 #Mission p,
 #Vision p,
-#Values p{
+#Values p {
   font-size: 0.9rem;
   line-height: 1.8;
   margin-top: 1rem;
 }
 
-#line::before{
+#line::before {
   content: "";
   position: absolute;
   left: 3.1rem;
+  width: 23rem;
+  border-bottom: 2px dotted white;
+  color: var(--clr-primary-7);
+  z-index: 4;
+  margin-top: 0.7rem;
+  margin-left: 16.5%;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+#line::after {
+  content: "";
+  position: absolute;
+  right: 19rem;
   width: 23.5rem;
   border-bottom: 2px dotted white;
   color: var(--clr-primary-7);
   z-index: 4;
   margin-top: 0.7rem;
-  margin-left: 17%;
-}
-
-.icon{
- font-size: 1.5rem;
-}
-
-#line::after{
-      content: "";
-      position: absolute;
-      right:18.34rem;
-      width: 23.5rem;
-      border-bottom: 2px dotted white;
-      color: var(--clr-primary-7);
-      z-index: 4;
-      margin-top: 0.7rem;
-      margin-left: 17%;
-
+  margin-left: 0%;
 }
 
 /* THIS IS FOR THE IMPACT SECTION */
 
-.Impact-Container{
-    display: flex;
-    width: 100vw;
-    height:90vh;
-    box-sizing: border-box;
+.Impact-Container {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  box-sizing: border-box;
+  margin-left: 3%;
+  padding-left: 5%;
 }
 
-.Impact-Section{
-    text-align: left;
-    align-self: center;
-    padding-left: 10%;
+.Impact-Section {
+  text-align: left;
+  align-self: center;
+  /* width: 100%; */
 }
 
-.Impact-Section h3{
-    color: var(--clr-primary-1);
-    font-size: 1.5rem;
-    font-weight: 900;
+.Impact-Section h3 {
+  color: var(--clr-primary-1);
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
-.Impact-Section h4{
-    font-size: 2rem;
-    font-weight: 900;
+.Impact-Section h4 {
+  font-size: 2rem;
+  font-weight: 900;
 }
 
-.Impact-Section p{
-    line-height: 1.8;
-    margin-top: 3%;
+.Impact-Section p {
+  line-height: 1.8;
+  margin-top: 3%;
 }
 
-.Box{
+.Box {
   display: flex;
   width: 100%;
   margin-top: 10%;
 }
 
-.Box div{
+.Box div {
   width: 9rem;
   height: 6rem;
   background-color: #181818;
@@ -390,7 +405,7 @@ header p{
 .Box div:nth-child(2),
 .Box div:nth-child(3),
 .Box div:nth-child(4),
-.Box div:nth-child(5){
+.Box div:nth-child(5) {
   margin-left: 2%;
 }
 
@@ -398,19 +413,19 @@ header p{
 .Box div:nth-child(2):after,
 .Box div:nth-child(3):after,
 .Box div:nth-child(4):after,
-.Box div:nth-child(5):after{
-  content:"";
+.Box div:nth-child(5):after {
+  content: "";
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
-  width: 8.25rem;
+  width: 7.2rem;
   height: 6rem;
   background-color: var(--clr-primary-8);
   opacity: 0.8;
   z-index: 1;
 }
 
-.Box div p{
+.Box div p {
   font-size: 0.7rem;
   position: relative;
   z-index: 2;
@@ -419,215 +434,429 @@ header p{
   margin-top: 25%;
 }
 
-.line{
+.line {
   background-image: var(--clr-gradient);
   height: 0.25rem;
   width: 100%;
   position: absolute;
-  margin-top: 16%;
+  margin-top: 5%;
 }
-.container {
+.impact-container {
   background-image: url(./Images/Rectangle\ 41.png);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 38rem;
   height: 38rem;
-  position: absolute;
-  margin-top: -5%;
-  left: 59%;
+  margin-left: -5%;
+  /* position: absolute; */
+  /* margin-top: -5%; */
+  /* left: 59%; */
 }
-
 
 /* THIS IS FOR THE GET SECTION */
 
-.Get{
-    height: 50vh;
-    width: 100%;
-    background-image: url(./Images/Blood\ donor\ 3.png);
-    background-position: center center;
-    margin-top: 5%;
+.Get {
+  height: 50vh;
+  width: 100%;
+  background-image: url(./Images/Blood\ donor\ 3.png);
+  background-position: center center;
+  margin-top: 5%;
 }
 
-.Get::before{
-    content: "";
-    height: 51vh;
-    width:100%;
-    background-color: var(--clr-primary-8);
-    opacity: 0.9;
-    position: absolute;
-    left: 0;
-    z-index: 1;
+.Get::before {
+  content: "";
+  height: 51vh;
+  width: 100%;
+  background-color: var(--clr-primary-8);
+  opacity: 0.9;
+  position: absolute;
+  left: 0;
+  z-index: 1;
 }
 
-.Get-Container{
-    text-align: left;
-    margin-top: 5%;
-    margin-left: 17%;
-    position: absolute;
-    z-index: 2;  
+.Get-Container {
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 17%;
+  position: absolute;
+  z-index: 2;
 }
 
-.Get-Container h2{
-    font-size: 1.3rem;
-    margin-top: 1%;
-    color: var(--clr-primary-7);
+.Get-Container h2 {
+  font-size: 1.3rem;
+  margin-top: 1%;
+  color: var(--clr-primary-7);
 }
 
-.Get-Container p:nth-child(1){
-    font-size: 0.8rem;
-    color: var(--clr-primary-7);
+.Get-Container p:nth-child(1) {
+  font-size: 0.8rem;
+  color: var(--clr-primary-7);
 }
 
-.Get-Container p:nth-child(3){
-    font-size: 0.9rem;
-    line-height: 1.9;
-    font-weight: 400;
-    margin-bottom: 5%;
-    color: var(--clr-primary-9)
+.Get-Container p:nth-child(3) {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  font-weight: 400;
+  margin-bottom: 5%;
+  color: var(--clr-primary-9);
 }
 
-#Get-Link{
-    color: var(--clr-primary-7);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.2rem;
-    border: 1px solid var(--clr-primary-7);
-    font-size: 0.7rem;
+#Get-Link {
+  color: var(--clr-primary-7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--clr-primary-7);
+  font-size: 0.7rem;
+  text-decoration: none;
 }
-
 
 /* THIS IS FOR THE EVENT SECTION */
 
-.Event{
-    background-color: var(--clr-primary-10);
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    margin-top: 5%;
-    justify-content: space-evenly ;
-    align-items: center ;
-    text-align: center;
+.Event {
+  background-color: var(--clr-primary-10);
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
-.Event h3{
-    color: var(--clr-primary-1);
-    font-size: 1.5rem;
-    margin-bottom: 5%;
+.Event h3 {
+  color: var(--clr-primary-1);
+  font-size: 1.5rem;
+  margin-bottom: 5%;
 }
 
-.Event p{
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 5%;
+.Event p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 5%;
 }
 
-
-.Event a{
-    background-color: var(--clr-primary-2);
-    color: var(--clr-primary-7);
-    padding: 0.5rem 2rem;
-    border-radius: 0.2rem;
-    font-size: 0.7rem;
+.Event a {
+  background-color: var(--clr-primary-2);
+  color: var(--clr-primary-7);
+  padding: 0.5rem 2rem;
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  text-decoration: none;
 }
 
-.border-line{
-    border-right: 2px solid var(--clr-primary-3);
-    height: 40vh;
+.border-line {
+  border-right: 2px solid var(--clr-primary-3);
+  height: 40vh;
 }
 
 /* THIS IS FOR THE FOOTER SECTION */
-.Footer-Container{
-    width: 100%;
-    height: 70vh;
-    background-color: var(--clr-primary-12);
-    color: var(--clr-primary-7);
-    margin-top: 5%;
+.Footer-Container {
+  width: 100%;
+  height: auto;
+  background-color: var(--clr-primary-12);
+  color: var(--clr-primary-7);
+  margin-top: 5%;
+  padding: 5% 0%;
 }
 
 .Footer-Container p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
-.Footer-Item-One{
-    width: 100vw;
-    height: 10vh;
-    margin-bottom: 5%;
-    text-align: left;
-    padding-left: 10%;
-    padding-top: 1%;
-    
+.Footer-Item-One {
+  width: 100vw;
+  height: 10vh;
+  margin-bottom: 5%;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 1%;
 }
 
-.Footer-Item-One Img{
-    width: 15rem;
-    height: 3rem;
-    
+.Footer-Item-One Img {
+  width: 15rem;
+  height: 3rem;
 }
 
-.Footer-Item-One p{
-    margin-left: 4%;
-    line-height: 1.5;
-    font-size: 0.8rem;
+.Footer-Item-One p {
+  margin-left: 4%;
+  line-height: 1.5;
+  font-size: 0.8rem;
 }
 
-.Footer-Item-Two{
-    display: flex;
-    justify-content: space-evenly;
-    height: 40vh;
-    margin-left: -5%;
+.Footer-Item-Two {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0% 10%;
 }
 
-#First-Item{
-    line-height: 1.8;
-    text-align: left;
+#First-Item {
+  line-height: 1.8;
+  text-align: left;
 }
 
-#First-Item-One{
-    padding-bottom: 5%;
+#First-Item-One {
+  padding-bottom: 5%;
 }
 
-#Second-Item{
-    line-height: 1.8;
+#Second-Item {
+  line-height: 1.8;
 }
 
-#Second-Item h5{
-    text-align: center;
-    padding-left: 17%;
+#Second-Item h5 {
+  text-align: center;
+  padding-left: 17%;
 }
 
-#Second-Item ul{
-    display: block;
+#Second-Item ul {
+  display: block;
 }
 
-#Second-Item li{
-    list-style-type: none;
+#Second-Item li {
+  list-style-type: none;
 }
 
-#Second-Item a{
-    text-decoration: none;
-    color: var(--clr-primary-6);
-    font-size: 0.8rem;
+#Second-Item a {
+  text-decoration: none;
+  color: var(--clr-primary-6);
+  font-size: 0.8rem;
 }
 
-#Third-Item{
-    text-align: left;
-    line-height: 1.8;
+#Third-Item {
+  text-align: left;
+  line-height: 1.8;
 }
 
 #Third-Item-One {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #Third-Item-One Img {
+    width: 30px;
+    height: 30px;
+}
+
+.Footer-Item-Three {
+  padding-top: 1%;
+}
+
+.Footer-Item-Three p {
+  text-align: left;
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 960px) {
+  .body {
     width: 100%;
-    height: 5vh;
+    box-sizing: border-box;
+  }
+
+  .hero {
+    background-size: cover;
+  }
+
+  br {
+    display: none;
+  }
+
+  .dropdown-content1,
+.dropdown-content2 {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 2% 0%;
 }
 
-.Footer-Item-Three{
-    padding-top: 1%;
+.dropdown-content2{
+  margin-top: 3%;
 }
 
-.Footer-Item-Three p{
-    text-align: left;
-    padding-left: 10%;
+  /* hero section */
+
+  .btn1,
+  .btn2{
+    margin-bottom: 5%;
+    margin-left: 0%;
+  }
+
+  /* Who section */
+
+  #Img-Container::before {
+    display: none;
+  }
+
+  #Img-Container {
+    margin: 0px;
+    padding-bottom: 5%;
+  }
+
+  .Who-Container img {
+    width: 100%;
+  }
+  .Who-We-Are {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .Who-We-Are p {
+    width: 100%;
+    text-align: justify;
+    font-size: 0.7rem;
+  }
+
+  /*Vision section */
+
+  .Vision-Container {
+    height: auto;
+    margin: 0%;
+    background-size: cover;
+  }
+
+  .Vision-Container::before {
+    height: 110vh;
+    margin: 0%;
+  }
+
+  #Mission,
+  #Vision,
+  #Values {
+    width: 100%;
+  }
+  .vision {
+    z-index: 3;
+    padding: 5% 0%;
+  }
+
+  #line {
+    display: none;
+  }
+
+  /*Impact section */
+  .Impact-Container {
+    height: auto;
+    margin: 10% 0%;
+    width: 100%;
+  }
+
+  .Impact-Section {
+    padding: 7% 10%;
+    text-align: center;
+  }
+
+  .Impact-Section p,
+  .Event p,
+  .Footer-Container p{
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .impact-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    left: 0;
+    margin: 0%;
+  }
+
+  .Box{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 5% 5%;
+    padding: 0% 5%;
+  }
+
+  .Box div{
+    width:100%;;
+  }
+
+  .line{
+    display: none;
+  }
+
+
+    .Box div:nth-child(1):after,
+    .Box div:nth-child(2):after,
+    .Box div:nth-child(3):after,
+    .Box div:nth-child(4):after,
+    .Box div:nth-child(5):after{
+        width: 100%;
+    }
+
+    .Box div p {
+      margin-top: 15%;
+    }
+    /*Get section */
+    .Get{
+        display: grid;
+        place-items: center;
+        margin: 0%;
+    }
+
+    .Get-Container {
+        margin: 0%;
+        padding: 0% 10%;
+    }
+
+    /*Event section */
+    .Event{
+        height:auto;
+        margin: 5% 0%;
+        padding: 10% 10%;
+        width: 104%;
+    }
+
+    .Event-Container{
+        padding-bottom: 5%;
+    }
+
+    .Gallery-Container{
+        padding-top: 5%;
+    }
+
+    .border-line{
+        display:none;
+    }
+
+    /*Footer section */
+    .Footer-Container{
+        height: auto;
+        margin: 0%;
+        padding: 5% 0%;
+    }
+
+    .Footer-Item-One,
+    #Second-Item{
+        padding: 0%;
+    }
+
+    .Footer-Item-Two, 
+    .Footer-Item-Three{
+        padding: 5% 0%;
+    }
+
+    .Footer-Item-One,
+    #First-Item,
+    #Third-Item,
+    .Footer-Item-Three{
+        text-align: center;
+    }
+
+    #First-Item p,
+    #Second-Item li,
+    #Third-Item p{
+        font-size: 0.7rem;
+    }
+
+    #Second-Item h5{
+        padding-left: 10%;
+    }
+
+    #Third-Item-One{
+        padding: 0% 20%;
+    }
+
+    .Footer-Item-Three{
+        text-align: center;
+    }
 }
